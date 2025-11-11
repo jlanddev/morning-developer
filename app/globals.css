@@ -4,25 +4,17 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-wrap: balance;
-  orphans: 2;
-  widows: 2;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 p {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-wrap: pretty;
-  orphans: 2;
-  widows: 2;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .newspaper-masthead {
