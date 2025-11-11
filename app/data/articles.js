@@ -38,6 +38,18 @@ export const articles = [
 
   // LAND ACQUISITION
   {
+    id: 'cayetano-development-luna-rosa',
+    title: 'Cayetano Development: From 3 Employees to 75, Austin Developer Closes on 1,649-Home Subdivision',
+    category: 'Land Acquisition',
+    series: 'The Texas 30',
+    summary: 'CEO Kyndel Bennett leads Cayetano Development through explosive growth, expanding from a 3-person operation in 2009 to 75 employees managing 60+ completed subdivisions. The Austin-based developer just closed on Luna Rosa, a 688-acre, 1,649-home project in Caldwell County, positioning the company at the heart of the Austin-San Antonio growth corridor while maintaining their mission of accessible homeownership through owner financing.',
+    content: "Cayetano Development has quietly become one of Central Texas's most prolific subdivision developers, completing over 60 residential communities since 2009 while growing from a three-person startup to a 75-employee operation. Led by CEO Kyndel Bennett, the Austin-headquartered company recently closed on Luna Rosa, a transformative 1,649-home subdivision on 688 acres in Caldwell County—capitalizing on the explosive suburban growth between Austin and San Antonio. What sets Cayetano apart is their owner-financing model, making homeownership accessible across major Texas markets including Austin, Dallas, Fort Worth, Houston, San Antonio, Laredo, and the Rio Grande Valley. With over 30 years of combined experience in real estate development, mortgage origination, and servicing, the company has carved out a unique position in the market by focusing on affordable housing while institutional capital floods into luxury developments. The Luna Rosa project represents Cayetano's largest single acquisition to date and demonstrates the company's ability to compete for prime land in one of America's fastest-growing regions.",
+    date: '2025-11-10',
+    source: 'The Real Deal, Cayetano Development',
+    slug: 'cayetano-development-luna-rosa',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop'
+  },
+  {
     id: 'haven-ground-aggie-expressway',
     title: 'Haven Ground: Houston-Based Developer Makes the Map with Aggie Expressway Ranch Acquisition',
     category: 'Land Acquisition',
