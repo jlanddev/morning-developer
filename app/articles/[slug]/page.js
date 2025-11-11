@@ -114,10 +114,10 @@ export default async function ArticlePage({ params }) {
       </header>
 
       {/* Article */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         <article>
           {article.image && (
-            <div className="w-full h-96 overflow-hidden bg-gray-100 border-4 border-black mb-8">
+            <div className="w-full h-48 sm:h-64 md:h-96 overflow-hidden bg-gray-100 border-4 border-black mb-6 sm:mb-8">
               <img
                 src={article.image}
                 alt={article.title}
@@ -126,7 +126,7 @@ export default async function ArticlePage({ params }) {
             </div>
           )}
 
-          <div className="border-4 border-black bg-white p-8 md:p-12">
+          <div className="border-4 border-black bg-white p-4 sm:p-8 md:p-12">
             <div className="mb-6 flex gap-3">
               <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-red-600">
                 {article.category}
@@ -155,7 +155,7 @@ export default async function ArticlePage({ params }) {
             </div>
 
             <div className="space-y-6">
-              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed font-medium border-l-4 border-red-600 pl-4 sm:pl-6">
+              <p className="text-sm sm:text-lg md:text-xl text-gray-800 leading-snug sm:leading-relaxed font-medium border-l-4 border-red-600 pl-3 sm:pl-6">
                 {article.summary}
               </p>
 
