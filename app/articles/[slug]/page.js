@@ -155,7 +155,7 @@ export default async function ArticlePage({ params }) {
             </div>
 
             <div className="space-y-4">
-              <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-medium border-l-4 border-red-600 pl-3 sm:pl-6" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
+              <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed font-bold border-l-4 border-red-600 pl-4 sm:pl-6 py-2 bg-gray-50" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                 {article.summary}
               </p>
 
