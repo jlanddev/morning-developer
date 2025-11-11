@@ -127,18 +127,18 @@ export default async function ArticlePage({ params }) {
           )}
 
           <div className="border-4 border-black bg-white p-4 sm:p-8 md:p-12">
-            <div className="mb-6 flex gap-3">
-              <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-widest text-white bg-red-600">
+            <div className="mb-4 flex flex-wrap gap-2">
+              <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest text-white bg-red-600">
                 {article.category}
               </span>
               {article.series && (
-                <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-widest text-black border-2 border-black">
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest text-black border-2 border-black">
                   {article.series}
                 </span>
               )}
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-black mb-6 leading-tight">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-black mb-4 leading-tight" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
               {article.title}
             </h1>
 
@@ -154,14 +154,14 @@ export default async function ArticlePage({ params }) {
               <span>Source: {article.source}</span>
             </div>
 
-            <div className="space-y-6">
-              <p className="text-sm sm:text-lg md:text-xl text-gray-800 leading-snug sm:leading-relaxed font-medium border-l-4 border-red-600 pl-3 sm:pl-6">
+            <div className="space-y-4">
+              <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-medium border-l-4 border-red-600 pl-3 sm:pl-6" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                 {article.summary}
               </p>
 
-              <div className="text-gray-700 leading-relaxed space-y-4 text-base sm:text-lg">
+              <div className="text-gray-700 leading-relaxed space-y-3 text-sm sm:text-base">
                 {article.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
+                  <p key={index} style={{wordBreak: 'normal', overflowWrap: 'normal'}}>{paragraph}</p>
                 ))}
               </div>
             </div>

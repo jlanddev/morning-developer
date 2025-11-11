@@ -87,7 +87,7 @@ export default function Home() {
                   </div>
                 )}
                 <div className="p-6 sm:p-8 bg-white flex flex-col justify-center transition-opacity duration-500" key={`content-${featured.id}`}>
-                  <div className="flex gap-2 mb-3">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     <div className="text-xs font-bold uppercase tracking-widest text-red-600">
                       {featured.category}
                     </div>
@@ -100,10 +100,10 @@ export default function Home() {
                       </>
                     )}
                   </div>
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-4 leading-tight">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-black mb-4 leading-tight" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                     {featured.title}
                   </h2>
-                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                     {featured.summary}
                   </p>
                   <div className="text-xs text-gray-500 font-mono uppercase tracking-wider tabular-nums">
@@ -142,7 +142,7 @@ export default function Home() {
               href={`/articles/${article.slug}`}
               className="border-b-2 border-gray-200 pb-6"
             >
-              <div className="flex gap-2 mb-2">
+              <div className="flex flex-wrap gap-2 mb-2">
                 <div className="text-xs font-bold uppercase tracking-widest text-red-600">
                   {article.category}
                 </div>
@@ -155,10 +155,10 @@ export default function Home() {
                   </>
                 )}
               </div>
-              <h3 className="text-lg sm:text-xl font-black text-black mb-3 leading-tight">
+              <h3 className="text-base sm:text-lg font-black text-black mb-2 leading-tight" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                 {article.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-3 line-clamp-3">
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3 line-clamp-3" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                 {article.summary}
               </p>
               <div className="text-xs text-gray-500 font-mono uppercase tracking-wider tabular-nums">
