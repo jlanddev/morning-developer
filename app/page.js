@@ -142,15 +142,6 @@ export default function Home() {
               href={`/articles/${article.slug}`}
               className="border-b-2 border-gray-200 pb-6"
             >
-              {article.image && (
-                <div className="aspect-video overflow-hidden bg-gray-100 mb-4">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
               <div className="flex gap-2 mb-2">
                 <div className="text-xs font-bold uppercase tracking-widest text-red-600">
                   {article.category}
