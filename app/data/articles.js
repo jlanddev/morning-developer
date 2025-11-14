@@ -51,7 +51,7 @@ export const articles = [
   },
   {
     id: 'haven-ground-aggie-expressway',
-    title: 'Haven Ground: Houston-Based Developer Makes the Map with Aggie Expressway Ranch Acquisition',
+    title: 'Haven Ground: Houston-Based Land Investment Firm Makes the Map with Aggie Expressway Ranch Acquisition',
     category: 'Land Acquisition',
     series: 'The Texas 30',
     summary: '28-year-old founder Jordan Harmon and his tight-knit team have quietly assembled 731 acres across Texas in just five years all while being the youngest players in a market dominated by institutional capital. In a recent podcast, Harmon downplayed the achievement with characteristic humility. "We just want to stay true to who we are, give the shirt off our back, and build deep relationships with Texans doing what they love," he said. Starting as a solo operation and growing to 12 people, Haven Ground has closed deals in Washington County, Belton, Somerville, Nashville, Hill County, and Odessa not through aggressive tactics, but through what Harmon calls "the good ol\' southern handshake." "We wouldn\'t be able to compete with institutional-grade capital being deployed in the Texas market," Harmon admitted candidly. "Landowners do business with us because of who we are on the inside. I truly believe that."',
