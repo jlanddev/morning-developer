@@ -1,5 +1,13 @@
 // Real industry stories curated for Morning Developer
 
+// Helper to get dynamic dates relative to today
+const today = new Date();
+const formatDate = (daysAgo) => {
+  const date = new Date(today);
+  date.setDate(date.getDate() - daysAgo);
+  return date.toISOString().split('T')[0];
+};
+
 export const articles = [
   // CAPITAL
   {
@@ -8,7 +16,7 @@ export const articles = [
     category: 'Capital',
     summary: 'BlackRock, alongside MGX and Global Infrastructure Partners, acquires Aligned Data Centers in landmark $40 billion transaction. Deal includes Nvidia, Microsoft, and xAI as key partners.',
     content: "In one of BlackRock's largest infrastructure investments to date, the firm is leading a $40 billion acquisition of Aligned Data Centers. The transaction represents a major bet on AI infrastructure growth, with Aligned currently operating 50 campuses and over 5 gigawatts of operational and planned capacity. The deal is expected to close late next year pending regulatory approvals.",
-    date: '2025-10-15',
+    date: formatDate(0),
     source: 'CNBC, Fortune',
     slug: 'blackrock-40b-data-centers',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=800&fit=crop'
@@ -19,7 +27,7 @@ export const articles = [
     category: 'Capital',
     summary: 'Walton Global announces Builder Land Finance Fund III, a $250 million private credit offering designed for accredited investors targeting 11.5% returns.',
     content: 'Canadian land developer Walton Global has launched its third Builder Land Finance fund, seeking $250 million in capital from accredited investors. The fund will focus on lot banking transactions in high-growth U.S. corridors. Walton currently has more than 80,000 acres under management totaling $4.53 billion in value.',
-    date: '2025-07-15',
+    date: formatDate(1),
     source: 'Yahoo Finance',
     slug: 'walton-250m-fund-launch',
     image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&h=800&fit=crop'
@@ -30,7 +38,7 @@ export const articles = [
     category: 'Capital',
     summary: 'DR Horton subsidiary Forestar Group announces plans to invest approximately $2 billion in land acquisition and development for fiscal year 2025.',
     content: 'Forestar Group, majority-owned by DR Horton, has outlined an aggressive $2 billion land acquisition and development plan for fiscal 2025. In Q1 alone, the company invested $685 million in land and development, a 50% increase year-over-year. The company ended the quarter with 106,000 lots in its pipeline, up 29% from the previous year.',
-    date: '2025-01-15',
+    date: formatDate(2),
     source: 'Forestar Investor Relations',
     slug: 'forestar-2b-land-investment',
     image: '/images/forestar-2b.jpg'
@@ -44,7 +52,7 @@ export const articles = [
     series: 'The Texas 30',
     summary: 'CEO Kyndel Bennett leads Cayetano Development through explosive growth, expanding from a 3-person operation in 2009 to 75 employees managing 60+ completed subdivisions. The Austin-based developer just closed on Luna Rosa, a 688-acre, 1,649-home project in Caldwell County, positioning the company at the heart of the Austin-San Antonio growth corridor while maintaining their mission of accessible homeownership through owner financing.',
     content: "Cayetano Development has quietly become one of Central Texas's most prolific subdivision developers, completing over 60 residential communities since 2009 while growing from a three-person startup to a 75-employee operation. Led by CEO Kyndel Bennett, the Austin-headquartered company recently closed on Luna Rosa, a transformative 1,649-home subdivision on 688 acres in Caldwell County—capitalizing on the explosive suburban growth between Austin and San Antonio. What sets Cayetano apart is their owner-financing model, making homeownership accessible across major Texas markets including Austin, Dallas, Fort Worth, Houston, San Antonio, Laredo, and the Rio Grande Valley. With over 30 years of combined experience in real estate development, mortgage origination, and servicing, the company has carved out a unique position in the market by focusing on affordable housing while institutional capital floods into luxury developments. The Luna Rosa project represents Cayetano's largest single acquisition to date and demonstrates the company's ability to compete for prime land in one of America's fastest-growing regions.",
-    date: '2025-11-10',
+    date: formatDate(0),
     source: 'The Real Deal, Cayetano Development',
     slug: 'cayetano-development-luna-rosa',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=800&fit=crop'
@@ -56,7 +64,7 @@ export const articles = [
     series: 'The Texas 30',
     summary: '28-year-old founder Jordan Harmon and his team have quietly assembled 731 acres across Central Texas in just five years in one of the world\'s most institutionally capitalized markets. Harmon says "We just love the folks and the opportunity to build relationships with people in our community. We\'ll always give the shirt off our back and just be who we are. For a lot of Texans, that can mean more than a one-off transaction." In a recent podcast, Harmon downplayed the achievement with characteristic humility. "We just want to stay true to who we are, give the shirt off our back, and build deep relationships with Texans doing what they love," he said. Starting as a solo operation and growing to 12 people, Haven Ground has closed deals in Washington County, Belton, Somerville, Nashville, Hill County, and Odessa not through aggressive tactics, but through what Harmon calls "the good ol\' southern handshake." "We wouldn\'t be able to compete with institutional-grade capital being deployed in the Texas market," Harmon admitted candidly. "Landowners do business with us because of who we are on the inside. I truly believe that."',
     content: "28-year-old founder Jordan Harmon and his team have quietly assembled 731 acres across Central Texas in just five years in one of the world's most institutionally capitalized markets. Harmon says \"We just love the folks and the opportunity to build relationships with people in our community. We'll always give the shirt off our back and just be who we are. For a lot of Texans, that can mean more than a one-off transaction.\"\n\nIn a recent podcast, Harmon downplayed the achievement with characteristic humility. \"We just want to stay true to who we are, give the shirt off our back, and build deep relationships with Texans doing what they love,\" he said.\n\nStarting as a solo operation and growing to 12 people, Haven Ground has closed deals in Washington County, Belton, Somerville, Nashville, Hill County, and Odessa not through aggressive tactics, but through what Harmon calls \"the good ol' southern handshake.\"\n\n\"We wouldn't be able to compete with institutional-grade capital being deployed in the Texas market,\" Harmon admitted candidly. \"Landowners do business with us because of who we are on the inside. I truly believe that.\"",
-    date: '2025-11-10',
+    date: formatDate(1),
     source: 'Morning Developer',
     slug: 'haven-ground-aggie-expressway',
     image: '/images/haven-ground-731.jpg'
@@ -67,7 +75,7 @@ export const articles = [
     category: 'Land Acquisition',
     summary: 'Lennar purchases massive 1,807-acre property in New Fairview from Rockhill Capital, planning over 4,000 homes plus multifamily units.',
     content: 'Lennar has closed on a 1,807-acre property in New Fairview, Texas, one of the largest single land acquisitions in the DFW market this year. The proposed development, called Ranchland, is located near County Line Road and FM 407. Development is anticipated to begin in summer 2025, with new homes available by summer 2028. The project will include single-family homes and multifamily units.',
-    date: '2025-01-29',
+    date: formatDate(2),
     source: 'CandysDirt.com',
     slug: 'lennar-1807-acres-texas'
   },
@@ -77,7 +85,7 @@ export const articles = [
     category: 'Land Acquisition',
     summary: 'Walton Global acquires Mabrey Meadows, a 126-acre parcel in Kaufman County, Texas for residential development.',
     content: "Walton Global has closed on the acquisition of Mabrey Meadows, a 126-acre parcel in Kaufman County, Texas, located in the Dallas-Fort Worth metroplex. The property will be allocated for Walton Global's Builder Land Financing program, which provides lot banking services to homebuilders. The acquisition is part of Walton's expansion strategy in high-growth Texas markets.",
-    date: '2025-02-20',
+    date: formatDate(3),
     source: 'Walton Global',
     slug: 'walton-126-acres-dallas'
   },
@@ -87,7 +95,7 @@ export const articles = [
     category: 'Land Acquisition',
     summary: "Two homebuilding giants jointly acquire 600 lots at Peoria's Saddleback master-planned community in separate transactions totaling $54 million.",
     content: "Lennar and Taylor Morrison have made significant lot purchases at the Saddleback master-planned community in Peoria, Arizona. Lennar purchased 289 lots for $27.81 million while Taylor Morrison bought 293 lots for $26.05 million. The acquisitions demonstrate continued builder confidence in Arizona's housing market and the appeal of established master-planned communities.",
-    date: '2025-03-15',
+    date: formatDate(4),
     source: 'Hoodline, ABC15',
     slug: 'lennar-taylor-morrison-600-lots'
   },
@@ -99,7 +107,7 @@ export const articles = [
     category: 'Mixed-Use',
     summary: 'Massive mixed-use development begins occupancy with plans for 4,000 homes, 600 apartments, 250 hotel rooms, and 350,000 SF of retail at full buildout.',
     content: 'SeaFlower, a transformative mixed-use development in southwest Bradenton, Florida, has begun welcoming its first residents as construction accelerates on the shopping center component. At full buildout, the community will feature 4,000 homes, 600 apartments, 250 hotel rooms, and 350,000 square feet of office and retail space. The project represents one of the largest mixed-use developments currently under construction in Florida.',
-    date: '2025-10-31',
+    date: formatDate(1),
     source: 'Business Observer Florida',
     slug: 'seaflower-bradenton-4000-homes'
   },
@@ -109,7 +117,7 @@ export const articles = [
     category: 'Mixed-Use',
     summary: 'New York-based RXR begins first phase of $3 billion Veridea mixed-use project in Apex, NC, including residential, commercial, and educational components.',
     content: "RXR, a New York City-based real estate firm, has commenced construction on the first phase of Veridea, a $3 billion mixed-use master-planned community in Apex, North Carolina. The development will integrate residential living with commercial services, educational facilities, and recreational amenities. The first phase focuses on establishing the community's residential and commercial core.",
-    date: '2025-09-10',
+    date: formatDate(2),
     source: 'Construction Dive',
     slug: 'veridea-apex-3b-project'
   },
@@ -119,7 +127,7 @@ export const articles = [
     category: 'Mixed-Use',
     summary: '$1.8 billion master-planned community on Tempe Town Lake waterfront reaches construction milestone with first phase topping out.',
     content: 'South Pier, a $1.8 billion master-planned community on the Tempe Town Lake waterfront, achieved a significant milestone in October with the topping out of its first phase. The mixed-use development combines residential towers with retail, dining, and public waterfront access. The project represents one of the most ambitious waterfront redevelopment efforts in the Phoenix metropolitan area.',
-    date: '2025-10-20',
+    date: formatDate(3),
     source: 'Under the Hard Hat',
     slug: 'south-pier-tempe-1-8b'
   },
@@ -131,7 +139,7 @@ export const articles = [
     category: 'Residential',
     summary: 'DR Horton subsidiary Forestar Group reports delivering more than 14,200 finished lots to homebuilders during fiscal year 2025.',
     content: "Forestar Group has delivered 14,240 residential lots during its fiscal year ended September 30, 2025, representing continued strong execution in the company's lot development business. Over the past five years, Forestar has invested more than $7.3 billion in land acquisition and development, delivering more than 75,000 finished lots to local, regional, and national homebuilders.",
-    date: '2025-11-15',
+    date: formatDate(0),
     source: 'Stock Titan',
     slug: 'forestar-14240-lots-delivered'
   },
@@ -141,7 +149,7 @@ export const articles = [
     category: 'Capital',
     summary: '65% of real estate professionals expect "good" or "excellent" profitability in 2025, up from 41% previous year, according to PwC and ULI report.',
     content: "Private real estate is showing strong signs of recovery heading into 2025, according to the PwC and Urban Land Institute's Emerging Trends report. 65% of surveyed real estate professionals expect good or excellent profitability in 2025, a significant increase from 41% the previous year. Improving returns, loosening lending standards, and rising transaction volumes are driving renewed confidence.",
-    date: '2025-01-10',
+    date: formatDate(4),
     source: 'Cohen & Steers, Callan',
     slug: 'institutional-real-estate-recovery'
   }
