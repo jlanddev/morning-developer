@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }) {
 
             <div className="bg-black border-t-4 border-black px-8 py-4 text-center">
               <p className="text-white text-xs font-mono uppercase tracking-wider">
-                Morning Developer — Professional Intelligence for Land Development
+                Morning Developer. Professional Intelligence for Land Development
               </p>
             </div>
           </div>
@@ -136,6 +136,11 @@ export default async function ArticlePage({ params }) {
                   {article.series}
                 </span>
               )}
+              {article.market && (
+                <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest text-black border-2 border-black">
+                  {article.market}
+                </span>
+              )}
             </div>
 
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-black mb-4 leading-tight" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
@@ -155,9 +160,19 @@ export default async function ArticlePage({ params }) {
             </div>
 
             <div className="space-y-4">
-              <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed font-bold border-l-4 border-red-600 pl-4 sm:pl-6 py-2 bg-gray-50" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
-                {article.summary}
-              </p>
+              <div className="border-l-4 border-red-600 pl-4 sm:pl-6 py-3 bg-gray-50">
+                {article.byline && (
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="h-px w-6 bg-black"></div>
+                    <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-black font-mono">
+                      {article.byline}
+                    </span>
+                  </div>
+                )}
+                <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed font-bold" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
+                  {article.byline ? `"${article.summary}"` : article.summary}
+                </p>
+              </div>
 
               <div className="text-gray-700 leading-relaxed space-y-3 text-sm sm:text-base">
                 {article.content.split('\n\n').map((paragraph, index) => (

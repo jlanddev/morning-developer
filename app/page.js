@@ -87,7 +87,7 @@ export default function Home() {
                   </div>
                 )}
                 <div className="p-6 sm:p-8 bg-white flex flex-col justify-center transition-opacity duration-500" key={`content-${featured.id}`}>
-                  <div className="flex flex-wrap gap-2 mb-3">
+                  <div className="flex flex-wrap gap-2 mb-3 items-center">
                     <div className="text-xs font-bold uppercase tracking-widest text-red-600">
                       {featured.category}
                     </div>
@@ -99,13 +99,35 @@ export default function Home() {
                         </div>
                       </>
                     )}
+                    {featured.market && (
+                      <>
+                        <div className="text-xs text-gray-400">•</div>
+                        <div className="text-xs font-bold uppercase tracking-widest text-black">
+                          {featured.market}
+                        </div>
+                      </>
+                    )}
                   </div>
                   <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-black mb-4 leading-tight" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
                     {featured.title}
                   </h2>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
-                    {featured.summary}
-                  </p>
+                  {featured.byline ? (
+                    <div className="mb-6 border-l-4 border-red-600 pl-4 py-2">
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="h-px w-6 bg-black"></div>
+                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black font-mono">
+                          {featured.byline}
+                        </span>
+                      </div>
+                      <p className="text-sm sm:text-base text-black leading-relaxed font-bold italic" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
+                        "{featured.summary}"
+                      </p>
+                    </div>
+                  ) : (
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
+                      {featured.summary}
+                    </p>
+                  )}
                   <div className="text-xs text-gray-500 font-mono uppercase tracking-wider tabular-nums">
                     {new Date(featured.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} • {featured.source}
                   </div>

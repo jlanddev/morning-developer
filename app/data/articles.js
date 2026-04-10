@@ -9,6 +9,20 @@ const formatDate = (daysAgo) => {
 };
 
 export const articles = [
+  // LAND ACQUISITION (latest)
+  {
+    id: 'haven-ground-waller-52',
+    title: "Houston's Haven Ground Adds 52 Acres in Waller to Growing Portfolio, Plans Acreage Lot Community Along One of Texas' Hottest Growth Corridors",
+    category: 'Land Acquisition',
+    market: 'Waller, TX',
+    byline: 'Jordan Harmon, Founder',
+    summary: "We grew up out here. These are our neighbors, our churches, our Friday night lights. If we can help one more family own a piece of that, that's the whole point.",
+    content: "Haven Ground, a Houston-based land investment firm, has closed on 52 acres in Waller, Texas, a move that puts the seven-year-old firm squarely in the path of one of the fastest-growing submarkets in the state. The deal was made in partnership with Jones Capital.\n\nThe community will feature 1.5 to 2 acre lots, a rarity in a market dominated by 50 and 65 foot homesites. Haven Ground plans to preserve roughly 80 percent of the natural land on the property, keeping the trees, open space, and rural character that drew people to Waller in the first place.\n\n\"We're not building for press releases,\" Harmon said. \"We're building for the people we sit next to at church. The folks coaching little league with us. We want them to be able to stay close to the people they love and plant roots somewhere real.\"\n\nDetails on the community are still being finalized, but Harmon confirmed the site will be developed with working families in mind, people who want land they can actually afford in a market that keeps pushing them further out.\n\nThe acquisition comes as institutional capital continues to pour into the 290 corridor, with large-scale master-planned communities and commercial projects reshaping the area west of the Grand Parkway. Haven Ground's acreage lot concept is a different approach entirely, and Harmon says that's by design.\n\n\"Everybody's racing to build the next five-thousand-home subdivision. We'd rather build something where your neighbor knows your name and your kids ride bikes to each other's house. That's the Texas we grew up in and we're not ready to let go of it.\"\n\nHaven Ground currently operates across Texas, Mississippi, Tennessee, Colorado, Montana, Missouri, Kentucky, and several other states. The company has built its portfolio over seven years with a team of 12, focused on making land ownership accessible to everyday Americans.",
+    date: formatDate(0),
+    source: 'Morning Developer',
+    slug: 'haven-ground-waller-52',
+    image: '/images/haven-ground-waller-52.jpg'
+  },
   // CAPITAL
   {
     id: 'blackrock-40b-data-centers',
@@ -51,7 +65,7 @@ export const articles = [
     category: 'Land Acquisition',
     series: 'The Texas 30',
     summary: 'CEO Kyndel Bennett leads Cayetano Development through explosive growth, expanding from a 3-person operation in 2009 to 75 employees managing 60+ completed subdivisions. The Austin-based developer just closed on Luna Rosa, a 688-acre, 1,649-home project in Caldwell County, positioning the company at the heart of the Austin-San Antonio growth corridor while maintaining their mission of accessible homeownership through owner financing.',
-    content: "Cayetano Development has quietly become one of Central Texas's most prolific subdivision developers, completing over 60 residential communities since 2009 while growing from a three-person startup to a 75-employee operation. Led by CEO Kyndel Bennett, the Austin-headquartered company recently closed on Luna Rosa, a transformative 1,649-home subdivision on 688 acres in Caldwell County—capitalizing on the explosive suburban growth between Austin and San Antonio. What sets Cayetano apart is their owner-financing model, making homeownership accessible across major Texas markets including Austin, Dallas, Fort Worth, Houston, San Antonio, Laredo, and the Rio Grande Valley. With over 30 years of combined experience in real estate development, mortgage origination, and servicing, the company has carved out a unique position in the market by focusing on affordable housing while institutional capital floods into luxury developments. The Luna Rosa project represents Cayetano's largest single acquisition to date and demonstrates the company's ability to compete for prime land in one of America's fastest-growing regions.",
+    content: "Cayetano Development has quietly become one of Central Texas's most prolific subdivision developers, completing over 60 residential communities since 2009 while growing from a three-person startup to a 75-employee operation. Led by CEO Kyndel Bennett, the Austin-headquartered company recently closed on Luna Rosa, a transformative 1,649-home subdivision on 688 acres in Caldwell County, capitalizing on the explosive suburban growth between Austin and San Antonio. What sets Cayetano apart is their owner-financing model, making homeownership accessible across major Texas markets including Austin, Dallas, Fort Worth, Houston, San Antonio, Laredo, and the Rio Grande Valley. With over 30 years of combined experience in real estate development, mortgage origination, and servicing, the company has carved out a unique position in the market by focusing on affordable housing while institutional capital floods into luxury developments. The Luna Rosa project represents Cayetano's largest single acquisition to date and demonstrates the company's ability to compete for prime land in one of America's fastest-growing regions.",
     date: formatDate(0),
     source: 'The Real Deal, Cayetano Development',
     slug: 'cayetano-development-luna-rosa',
