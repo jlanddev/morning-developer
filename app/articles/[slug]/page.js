@@ -114,10 +114,10 @@ export default async function ArticlePage({ params }) {
       </header>
 
       {/* Article */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8">
         <article>
           {article.image && (
-            <div className="w-full h-48 sm:h-64 md:h-96 overflow-hidden bg-gray-100 border-4 border-black mb-6 sm:mb-8">
+            <div className="w-full h-40 sm:h-52 md:h-64 overflow-hidden bg-gray-100 border-4 border-black mb-4 sm:mb-6">
               <img
                 src={article.image}
                 alt={article.title}
@@ -126,7 +126,7 @@ export default async function ArticlePage({ params }) {
             </div>
           )}
 
-          <div className="border-4 border-black bg-white p-4 sm:p-8 md:p-12">
+          <div className="border-4 border-black bg-white p-4 sm:p-6 md:p-8">
             <div className="mb-4 flex flex-wrap gap-2">
               <span className="inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest text-white bg-red-600">
                 {article.category}
@@ -143,7 +143,7 @@ export default async function ArticlePage({ params }) {
               )}
             </div>
 
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-black mb-4 leading-tight" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black text-black mb-4 leading-tight">
               {article.title}
             </h1>
 
@@ -159,24 +159,24 @@ export default async function ArticlePage({ params }) {
               <span>Source: {article.source}</span>
             </div>
 
-            <div className="space-y-4">
-              <div className="border-l-4 border-red-600 pl-4 sm:pl-6 py-3 bg-gray-50">
+            <div className="space-y-5">
+              <div className="border-l-4 border-red-600 pl-4 py-2 bg-gray-50">
                 {article.byline && (
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-2">
                     <div className="h-px w-6 bg-black"></div>
-                    <span className="text-[10px] sm:text-xs font-black uppercase tracking-[0.2em] text-black font-mono">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-black font-mono">
                       {article.byline}
                     </span>
                   </div>
                 )}
-                <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed font-bold" style={{wordBreak: 'normal', overflowWrap: 'normal'}}>
+                <p className="text-sm sm:text-base md:text-lg text-black leading-snug font-bold">
                   {article.byline ? `"${article.summary}"` : article.summary}
                 </p>
               </div>
 
-              <div className="text-gray-700 leading-relaxed space-y-3 text-sm sm:text-base">
+              <div className="text-gray-700 leading-relaxed space-y-3 text-sm">
                 {article.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} style={{wordBreak: 'normal', overflowWrap: 'normal'}}>{paragraph}</p>
+                  <p key={index}>{paragraph}</p>
                 ))}
               </div>
             </div>
