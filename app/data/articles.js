@@ -10,8 +10,10 @@ const formatDate = (daysAgo) => {
 
 export const articles = [
   // LAND ACQUISITION (latest)
+  // To re-publish: remove the `hidden: true` line below
   {
     id: 'haven-ground-waller-52',
+    hidden: true,
     title: "Houston's Haven Ground Adds 52 Acres in Waller to Growing Portfolio, Plans Acreage Lot Community Along One of Texas' Hottest Growth Corridors",
     category: 'Land Acquisition',
     market: 'Waller, TX',

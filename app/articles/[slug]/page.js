@@ -2,14 +2,16 @@ import Link from 'next/link'
 import { articles } from '../../data/articles'
 
 export async function generateStaticParams() {
-  return articles.map((article) => ({
-    slug: article.slug,
-  }))
+  return articles
+    .filter((article) => !article.hidden)
+    .map((article) => ({
+      slug: article.slug,
+    }))
 }
 
 export default async function ArticlePage({ params }) {
   const resolvedParams = await params
-  const article = articles.find((a) => a.slug === resolvedParams.slug)
+  const article = articles.find((a) => a.slug === resolvedParams.slug && !a.hidden)
 
   if (!article) {
     return (

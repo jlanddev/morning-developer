@@ -8,9 +8,10 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [featuredIndex, setFeaturedIndex] = useState(0)
 
+  const visibleArticles = articles.filter(article => !article.hidden)
   const filteredArticles = selectedCategory === 'All'
-    ? articles
-    : articles.filter(article => article.category === selectedCategory)
+    ? visibleArticles
+    : visibleArticles.filter(article => article.category === selectedCategory)
 
   const categoryNames = ['All', ...Object.keys(categories)]
 
